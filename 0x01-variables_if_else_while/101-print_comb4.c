@@ -28,6 +28,7 @@ int main(void)
 						putchar(' ');
 					}
 				}
+				c++;
 			}
 			c = '0';
 			b++;
