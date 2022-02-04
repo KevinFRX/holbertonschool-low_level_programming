@@ -11,19 +11,19 @@ int main(void)
 	int b = '0';
 	int c = '0';
 
-	while (a <= '9')
+	while (a <= '7')
 	{
-		while (b <= '9')
+		while (b <= '8')
 		{
 			while (c <= '9')
 			{
-				if (a != b && a < b)
+				if (a != b && b != c && a != c && a < b && b < c)
 				{
-				putchar(a);
-				putchar(b);
-				putchar(c);
-				putchar(',');
-				putchar(' ');
+					putchar(a);
+					putchar(b);
+					putchar(c);
+					putchar(',');
+					putchar(' ');
 				}
 			}
 			c = '0';
@@ -34,5 +34,4 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
-
 }
