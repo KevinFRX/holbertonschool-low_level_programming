@@ -29,7 +29,7 @@ int main(void)
 			}
 			b++;
 		}
-		b = '0';
+		b = 0;
 		a++;
 	}
 	putchar('\n');
