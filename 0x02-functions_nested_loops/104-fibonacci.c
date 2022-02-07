@@ -10,12 +10,12 @@ int main(void)
 {
 	unsigned long i, a = 0, b = 1, c;
 
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < 98; i++)
 	{
 		c = a + b;
 		a = b;
 		b = c;
-		if (i != 99)
+		if (i != 97)
 		{
 			printf("%lu, ", c);
 		}
