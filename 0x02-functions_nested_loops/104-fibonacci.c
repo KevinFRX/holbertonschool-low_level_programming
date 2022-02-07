@@ -10,12 +10,12 @@ int main(void)
 {
 	unsigned long i, a = 0, b = 1, c;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 1; i++)
 	{
 		c = a + b;
 		a = b;
 		b = c;
-		if (i != 9)
+		if (i != 0)
 		{
 			printf("%lu, ", c);
 		}
