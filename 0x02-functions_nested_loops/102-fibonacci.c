@@ -8,18 +8,20 @@
 
 int main(void)
 {
-	int i, a = 1;
+	int i, a = 0, b = 1, c;
 
 	for (i = 0; i < 50; i++)
 	{
-		a = a + i;
+		c = a + b;
+		a = b;
+		b = c;
 		if (i != 49)
 		{
-			printf("%d, ", a);
+			printf("%d, ", c);
 		}
 		else
 		{
-			printf("%d", a);
+			printf("%d", c);
 		}
 	}
 	printf("\n");
