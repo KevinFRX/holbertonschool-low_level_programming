@@ -8,18 +8,22 @@
 
 int main(void)
 {
-	unsigned long i = 0, a = 0, b = 1, c;
+	unsigned long i, a = 0, b = 1, c;
 
-	while (c < 4000000)
+	for (i = 0; i < 100; i++)
 	{
 		c = a + b;
 		a = b;
 		b = c;
-		if (c % 2 == 0)
+		if (i != 99)
 		{
-			i = i + c;
+			printf("%lu, ", c);
+		}
+		else
+		{
+			printf("%lu", c);
 		}
 	}
-	printf("%lu\n", i);
+	printf("\n");
 	return (0);
 }
