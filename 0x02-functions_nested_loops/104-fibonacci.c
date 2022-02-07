@@ -8,21 +8,33 @@
 
 int main(void)
 {
-	unsigned long i, a = 0, b = 1, c;
+	int i, ex;
+	unsigned long a = 1, b = 1, c;
+	unsigned long ain, afi, bin, bfi, cin, cfi;
 
-	for (i = 0; i < 98; i++)
+	printf("1");
+	for (i = 0; i < 93; i++)
 	{
 		c = a + b;
 		a = b;
 		b = c;
-		if (i != 97)
-		{
-			printf("%lu, ", c);
-		}
-		else
-		{
-			printf("%lu", c);
-		}
+		printf(", %lu", c);
+	}
+	ain = a / 1000000000;
+	afi = a % 1000000000;
+	bin = b / 1000000000;
+	bfi = b % 1000000000;
+
+	while (i < 98)
+	{
+		ex = (afi + bfi) / 1000000000;
+		cfi = (afi + bfi) - (1000000000 * ex);
+		cin = (ain + bin) + ex;
+		printf(", %lu%lu", cin, cfi);
+		ain = bin;
+		afi = bfi;
+		bin = cin;
+		bfi = cfi;
 	}
 	printf("\n");
 	return (0);
