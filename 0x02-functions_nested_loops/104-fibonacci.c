@@ -35,6 +35,7 @@ int main(void)
 		afi = bfi;
 		bin = cin;
 		bfi = cfi;
+		i++;
 	}
 	printf("\n");
 	return (0);
