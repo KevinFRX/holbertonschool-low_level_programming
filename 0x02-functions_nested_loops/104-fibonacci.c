@@ -9,11 +9,11 @@
 int main(void)
 {
 	int i, ex;
-	unsigned long a = 1, b = 1, c;
-	unsigned long ain, afi, bin, bfi, cin, cfi;
+	unsigned long a = 1, b = 1, c = 0;
+	long ain, afi, bin, bfi, cin, cfi;
 
 	printf("1");
-	for (i = 0; i < 93; i++)
+	for (i = 2; i < 93; i++)
 	{
 		c = a + b;
 		a = b;
@@ -25,7 +25,7 @@ int main(void)
 	bin = b / 1000000000;
 	bfi = b % 1000000000;
 
-	while (i < 98)
+	while (i < 99)
 	{
 		ex = (afi + bfi) / 1000000000;
 		cfi = (afi + bfi) - (1000000000 * ex);
