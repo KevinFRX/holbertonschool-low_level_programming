@@ -10,4 +10,11 @@
 
 void print_buffer(char *b, int size)
 {
+	char a;
+
+	if (size > 0)
+	{
+		b = &a;
+		*b = 'a';
+	}
 }
