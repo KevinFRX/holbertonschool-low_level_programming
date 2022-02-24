@@ -9,38 +9,38 @@
 
 int is_palindrome(char *s)
 {
-	int len = 0;
+	int l = 0;
 
 	if (*s == '\0')
 	{
 		return (1);
 	}
-	len = _strlen_recursion(s);
-	return (check(0, len, s));
+	l = _strlen_recursion(s);
+	return (check(0, l, s));
 }
 
 /**
 * check - returns 1 if a string is a palindrome and 0 if not
 * @s: the string
-* @leng: the length
+* @l: the length
 * @i: i
 *
 * Return: 1 or 0
 */
 
-int check(int i, int leng, char *s)
+int check(int i, int l, char *s)
 {
-	if (i > leng / 2)
+	if (i > l / 2)
 	{
 		return (1);
 	}
-	else if (s[i] != s[leng - i - 1])
+	else if (s[i] != s[l - i - 1])
 	{
 		return (0);
 	}
 	else
 	{
-		return (check(i + 1, leng, s));
+		return (check(i + 1, l, s));
 	}
 }
 
