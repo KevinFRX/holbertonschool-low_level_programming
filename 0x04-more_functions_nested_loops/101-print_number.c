@@ -9,7 +9,7 @@
 
 void print_number(int n)
 {
-	int a, b = n, c = 1;
+	int b = n, c = 1;
 
 	if (n < 0)
 	{
@@ -21,7 +21,7 @@ void print_number(int n)
 		}
 		for (; c >= 1; c /= 10)
 		{
-			_putchar((((a / c) % 10) * -1) + 48);
+			_putchar((((n / c) % 10) * -1) + 48);
 		}
 	}
 	else
