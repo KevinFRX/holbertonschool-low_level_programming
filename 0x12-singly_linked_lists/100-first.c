@@ -1,8 +1,15 @@
 #include <stdio.h>
 
-void myStartupFun (void) __attribute__ ((constructor));
+void yqc(void) __attribute__ ((constructor));
 
-void myStartupFun (void)
+/**
+ * yqc - yqc
+ *
+ * Return: void
+ */
+
+void yqc(void)
 {
-    printf ("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
