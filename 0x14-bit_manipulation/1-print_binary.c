@@ -18,7 +18,7 @@ void print_binary(unsigned long int n)
 }
 
 /**
- * aux - aux
+ * print_binary_aux - aux
  * @n: n
  *
  * Return: void
