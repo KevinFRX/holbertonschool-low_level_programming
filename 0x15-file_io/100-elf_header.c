@@ -3,13 +3,11 @@
 /**
  * main - displays the information contained in the ELF header
  * at the start of an ELF file
- * @i: i
  *
- * Return: i
+ * Return: 1
  */
 
-int main(int i)
+int main(void)
 {
-	i = 0;
-	return (i);
+	return (1);
 }
