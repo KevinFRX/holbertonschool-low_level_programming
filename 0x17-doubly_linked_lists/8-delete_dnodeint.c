@@ -33,14 +33,17 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			temp = temp->next;
 			if (temp == NULL)
 				return (-1);
-			if (temp->next == NULL)
-				return (1);
 			i++;
 		}
 		dnode = temp->next;
-		temp->next = dnode->next;
-		(temp->next)->prev = temp;
-		free(dnode);
+		if (dnode)
+		{
+			temp->next = dnode->next;
+			(temp->next)->prev = temp;
+			free(dnode);
+		}
+		else
+			return (-1)
 	}
 	return (1);
 }
