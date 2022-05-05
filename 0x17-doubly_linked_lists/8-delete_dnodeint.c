@@ -31,10 +31,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		while (i < index)
 		{
 			temp = temp->next;
-			if (temp == NULL || temp->next == NULL)
-			{
+			if (temp == NULL)
 				return (-1);
-			}
+			if (temp->next == NULL)
+				return (1);
 			i++;
 		}
 		dnode = temp->next;
