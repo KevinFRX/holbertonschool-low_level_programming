@@ -26,6 +26,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[idx] = ht->array[idx]->next;
 	}
 	add_node(&ht->array[idx], key, value);
+	if (&ht->array[idx] == NULL)
+		return (0);
 	return (1);
 }
 /**
