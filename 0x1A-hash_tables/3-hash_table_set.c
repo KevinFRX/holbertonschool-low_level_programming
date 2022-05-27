@@ -16,15 +16,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	idx = key_index((unsigned char *)key, ht->size);
 	while (ht->array[idx])
+	{
 		if (strcmp(ht->array[idx]->key, key) == 0)
 		{
 			free(ht->array[idx]->value);
 			ht->array[idx]->value = strdup(value);
+			return (1);
 		}
-		else
-			add_node(&ht->array[idx], key, value);
+		ht->array[idx] = ht->array[idx]->next;
+	}
+	add_node(&ht->array[idx], key, value);
 	return (1);
-	
 }
 /**
  * add_node - adds a new node at the beginning of a list
